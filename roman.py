@@ -10,11 +10,13 @@ def to_roman(num):
     roman_chars = ["I", "IV", "V", "IX", "X", "XL",
                    "L", "XC", "C", "CD", "D", "CM", "M"]
 
-    i = len(arabic) - 1 # should always be 12
+    i = len(arabic) - 1  # should always be 12
     roman = ""
     while num:
-        digit = num // arabic[i] # this gets us the most significant digit
-        num %= arabic[i] # this removes the most significant digit for the next pass
+        # this gets us the most significant digit
+        digit = num // arabic[i]
+        # remove the most significant digit for the next pass
+        num %= arabic[i]
 
         # this appends the desired number of roman numerals to the string
         roman += (roman_chars[i] * digit)
