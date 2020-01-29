@@ -2,11 +2,11 @@ import os
 import sys
 import pytest
 
-from roman import to_roman
-
 currentdir = os.path.dirname(__file__)
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
+
+from roman import to_roman
 
 
 def test_roman_in_range():
